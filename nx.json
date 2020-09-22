@@ -28,6 +28,9 @@
     "app-e2e": {
       "tags": [],
       "implicitDependencies": ["app"]
+    },
+    "feature-a": {
+      "tags": []
     }
   }
 }
