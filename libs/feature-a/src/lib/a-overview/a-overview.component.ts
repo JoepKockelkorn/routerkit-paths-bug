@@ -1,4 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { getRoutes } from '@routerkit/core';
+
+import { TypedRoutes } from '../../../../../apps/app/app.routes';
 
 @Component({
   selector: 'routerkit-paths-bug-a-overview',
@@ -6,8 +9,6 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./a-overview.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AOverviewComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class AOverviewComponent {
+  routes = getRoutes<TypedRoutes>();
 }
