@@ -152,6 +152,38 @@
           "style": "scss"
         }
       }
+    },
+    "feature-b": {
+      "projectType": "library",
+      "root": "libs/feature-b",
+      "sourceRoot": "libs/feature-b/src",
+      "prefix": "routerkit-paths-bug",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/feature-b/tsconfig.lib.json",
+              "libs/feature-b/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/feature-b/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/feature-b/jest.config.js",
+            "tsConfig": "libs/feature-b/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/feature-b/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

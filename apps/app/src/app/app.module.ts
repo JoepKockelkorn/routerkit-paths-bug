@@ -16,6 +16,13 @@ import { RouterModule } from '@angular/router';
             (module) => module.FeatureAModule
           ),
       },
+      {
+        path: 'b',
+        loadChildren: () =>
+          import('@routerkit-paths-bug/feature-b').then(
+            (module) => module.FeatureBModule
+          ),
+      },
     ]),
   ],
   providers: [],

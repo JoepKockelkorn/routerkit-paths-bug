@@ -16,7 +16,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@routerkit-paths-bug/feature-a": ["libs/feature-a/src/index.ts"]
+      "@routerkit-paths-bug/feature-a": ["libs/feature-a/src/index.ts"],
+      "@routerkit-paths-bug/feature-b": ["libs/feature-b/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
